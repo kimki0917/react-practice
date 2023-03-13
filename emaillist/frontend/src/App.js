@@ -1,22 +1,25 @@
-import React from 'react';
-import './assets/css/App.css';
+import React, {useState, useEffect} from 'react';
 import RegisterForm from './RegisterForm';
-import Searchbar from './Searchbar';
+import SearchBar from './SearchBar';
 import Emaillist from './Emaillist';
-import emails from './assets/json/data.json';
+import './assets/scss/App.scss';
+import data from './assets/json/data.json'
 
 const App = () => {
-    const[emails, setEmails] = useState(data);
-    const notifyKeyWordChanged = function(keyword){
-        const newEmails = emails.filter(function(e){return firstName})
-    }
-    return (
-        <div id='App' className={'App'}>    
-            <RegisterForm  />
-            <Searchbar/>        
-            <Emaillist emails={emails} />
-        </div>
-    );
+  const [emails, setEmails] = useState(data);
+  const notifyKeyWordChanged = function(keyword) {
+    // keyword가 firstName or lastName or email
+    const newEmails = emails.filter(function(e) {return})
+
+  }
+
+  return (
+    <div id={'App'}>
+      <RegisterForm />
+      <SearchBar />
+      <Emaillist emails={emails} />
+    </div>
+  )
 }
 
 export default App;
