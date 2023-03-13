@@ -23,4 +23,3 @@ const KanbanBoard = () => {
 };
 
 export default KanbanBoard;
-//rsc

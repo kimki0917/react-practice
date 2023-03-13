@@ -11,6 +11,3 @@ function App(props) {
 }
 
 export default App;
-//rsc
-//rsf
-//rcc

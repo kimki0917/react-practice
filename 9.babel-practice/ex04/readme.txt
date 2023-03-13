@@ -12,8 +12,11 @@
    $ npm i -D @babel/core @babel/cli @babel/preset-env
 
 3) 프리셋 설치 확인
-    $npm list --depth=1
+    $ npm list --depth=1 | grep @ babel/plugin
 4) Env Preset 설정
     - 타겟 브라우저를 설정하는 방식
     - 브라우저별 es6 호환성 테이블 (https://kangax.github.io/compat-table/es6)
+
+5) 변환하기
+    $ npx babel src/index.js -o dist/index.js
 
