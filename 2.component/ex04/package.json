@@ -1,10 +1,10 @@
 {
-  "name": "emaillist",
+  "name": "ex03",
   "version": "1.0.0",
-  "description": "",
+  "description": "ex02: Component Styling - React Event",
   "main": "index.js",
   "scripts": {
-    "debug": "npx webpack serve --config config/webpack.config.js --progress --mode development",
+    "debug": "npx webpack serve --config config/webpack.config.js --progress --mode development --env",
     "build": "npx webpack --config config/webpack.config.js --mode production"
   },
   "keywords": [],

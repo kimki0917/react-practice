@@ -10,3 +10,5 @@ const Searchbar = () => {
 };
 
 export default Searchbar;
+//제어컴포넌트 안만들어도 됨
+//바로 호출할 수 있게
