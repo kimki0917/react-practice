@@ -1,4 +1,4 @@
-ex02: Component Styling - React Event
+ex03: Component Styling - React Event
 
 1) Inline Handler
 2) Function Handler

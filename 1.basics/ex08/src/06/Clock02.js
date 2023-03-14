@@ -9,7 +9,7 @@ function Clock01(props) {
     '0' + (hours > 12 ? hours - 12 : hours)
     return (
         <div>
-            {('0' + (hours > 12 ? horus - 12 : hours)).slice(-2)}
+            {('0' + (hours > 12 ? hours - 12 : hours)).slice(-2)}
             {':'}
             {('0' + minutes).slice}
             {':'}
