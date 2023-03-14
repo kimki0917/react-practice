@@ -15,10 +15,10 @@ export default function App() {
     }
 
     useEffect(() => {
-        setInterval(() => {
+        const id = setInterval(() => {
             setTicks(update());
           }, 1000);
-                
+          return (() => clearInterval(id))        
       });
     
       state();
@@ -26,7 +26,6 @@ export default function App() {
     let hours = now.getHours();
     let minutes = now.getMinutes();
     let seconds = now.getSeconds();
-  
 
     return (
         <div>
