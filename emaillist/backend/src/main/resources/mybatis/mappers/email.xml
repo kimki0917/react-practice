@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="email">
+	<select id="findAll" resultType="EmaillistVo" parameterType="map">
+		<![CDATA[
+			select no, first_name, last_name, email from emaillist order by no asc
+		]]>
+	</select>
+		<insert id="insert" parameterType="EmaillistVo">
+		<![CDATA[
+		insert into emaillist 
+		values (null, #{firstName},#{lastName},#{email}  )
+		]]>
+	</insert>
+	<delete id="delete" parameterType="int">
+		<![CDATA[
+		delete from emaillist where no = #{no}
+		]]>
+	</delete>
+</mapper>

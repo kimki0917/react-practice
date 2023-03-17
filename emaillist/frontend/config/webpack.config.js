@@ -1,4 +1,5 @@
 const path = require('path');
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
 module.exports = function(env){
     return {
@@ -19,18 +20,23 @@ module.exports = function(env){
                 }
             },{
                 test: /\.(c|sa|sc)ss$/i,
-                use: ['style-loader', 
-                {
-                    loader: 'css-loader',
-                    options: {
-                        modules: true
-                    }
-                }, 'sass-loader']
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true
+                        }
+                    },
+                    'sass-loader']
             }, {
                 test: /\.(png|gif|jpe?g|svg|ico|tiff?|bmp)$/i,
                 type: 'asset/resource'
             }]
         },
+        plugins: [
+            new CaseSensitivePathsPlugin()
+        ],
         devtool: "eval-source-map",
         devServer: {
             host: '0.0.0.0',

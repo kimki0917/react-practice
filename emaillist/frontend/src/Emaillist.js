@@ -1,18 +1,24 @@
-import React from 'react';
-import styles from './assets/css/Emaillist.css';
+import React from 'react'
+import styles from './assets/scss/Emaillist.scss';
+import Email from './Email';
+import PropTypes from 'prop-types';
 
-const Emaillist = ({emails}) => {
-    return (
-        <ul className={styles.Emaillist}>    
+export default function Emaillist({emails}) {
+  return (
+        <ul className={styles.Emaillist}>
         {
-            emails.map(email => <li key={email.no} className={styles.Emaillist}>
-                {email.firstName}{email.lastName}
-                <br/>
-                {email.email}
-            </li>)
+            emails.map(email => <Email
+                                    key={email.no}
+                                    firstName={email.firstName}
+                                    lastName={email.lastName}
+                                    email={email.email}
+                                    no = {email.no}
+                                     />)
         }
-    </ul>
-    );
-};
+        </ul>
+    )
+}
 
-export default Emaillist;
+Emaillist.propTypes = {
+    emails: PropTypes.arrayOf(PropTypes.shape(Email.propType))
+}

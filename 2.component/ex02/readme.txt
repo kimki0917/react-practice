@@ -14,6 +14,8 @@ ex02: Component Styling
     -css-loader options:{modules:true}
 6) CSS in JS : Styled Component*, Less & Styleable
 7) React Modal 
+    - 설치
+    $ npm i react-modal
 8) Modal: Material UI
 
 src/01: FoodList: 함수 컴포넌트 
