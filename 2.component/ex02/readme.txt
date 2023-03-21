@@ -16,6 +16,7 @@ ex02: Component Styling
 7) React Modal 
     - 설치
     $ npm i react-modal
+    
 8) Modal: Material UI
 
 src/01: FoodList: 함수 컴포넌트 
